@@ -3,9 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 	<title>登录界面</title>
 	<style type="text/css">
-		html{font-size: 625%;}
+		/*html{font-size: 625%;}
 		body{
 			font-size: 0.16rem;
 			margin: 0;padding: 0;
@@ -14,10 +16,10 @@
 			height: 100vh;
 
 		}
-		*{box-sizing: border-box;}
+		*{box-sizing: border-box;}*/
 
 	/*	header样式*/
-		.header{
+		/*.header{
 			display: flex;
 			width: 100%;
 			background: rgb(95,192,205);
@@ -29,9 +31,9 @@
 		.header>.loginText{
 			font-size: 0.18rem;
 		}
-
+*/
 		/*表单样式*/
-		.input>*{vertical-align: middle;}
+		/*.input>*{vertical-align: middle;}
 		.input{
 			background: white;
 			margin-bottom: 0.1rem;
@@ -47,9 +49,9 @@
 			width: 80%;
 			border: none;
 			outline: none;
-		}
+		}*/
 		/*登陆按钮的样式*/
-		.logincontainer>button{
+		/*.logincontainer>button{
 			width: 100%;
 			background: #5fc0cd;
 			border: none;
@@ -57,11 +59,11 @@
 			font-size: 0.18rem;
 			padding: 0.15rem;
 			margin-top: 0.2rem;
-		}
+		}*/
 		
 
 		/*忘记密码样式设计*/
-		.forgetPass a{
+		/*.forgetPass a{
 			
 			color:  #5fc0cd;
 				
@@ -73,32 +75,43 @@
 			margin-right: 0.1rem;
 			
 		}
-
+*/
 		
 
 
 	</style>
 </head>
 <body>
-	<header class="header">
+	<header class="header theme-default">
 		<div class="close">关闭</div>
 		<div class="loginText">登陆</div>
 		<div class="register">注册</div>
 	</header>
 	<form method="post" name="loginForm">
 		<div class="input phonecontainer">
-			<img src="image/iphone.png" width="20" >
-			<img src="image/line.png" height="40" >
+			<img src="image/iphone.png" >
 			<input type="text" name="phone" placeholder="请输入手机号" required="required" onkeyup="this.value=this.value.replace(/\D/g,'')" maxlength="11">
 		</div>
 		<div class="input passcontainer">
-			<img src="image/locked-2.png" width="20" >
-			<img src="image/line.png" height="40" >
+			<img src="image/locked-2.png">
 			<input type="password" name="password" placeholder="请输入密码" required="required"></div>
-		<div class="logincontainer"><button type="submit" name="loginButton">登&nbsp;&nbsp;陆</button></div>
+		<div class="logincontainer"><button type="submit" name="loginButton" class="btn-login theme-default">登&nbsp;&nbsp;陆</button></div>
 	</form>
-	<div class="forgetPass"><a href="#" >忘记密码</a></div>
+	<div class="forgetPass"><a href="#" >忘记密码?</a></div>
 	
+	<footer>
+		<div class="ft-title">
+			<span class="line"></span>
+			<span>第三方账号登录</span>
+			<span class="line"></span>	
+		</div>
+		<div class="ft-link">
+			<a href="#" class="bg-weixin">微信登录</a>
+			<a href="#" class="bg-weibo">微博登录</a>
+			<a href="#" class="bg-qq">QQ登录</a>
+		</div>
+
+	</footer>
 
 </body>
 </html>
